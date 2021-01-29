@@ -35,6 +35,7 @@ stages:
             backendAzureRmResourceGroupName: 'terraform-storage-rg'
             backendAzureRmResourceGroupLocation: 'Central US'
             backendAzureRmStorageAccountName: 'terrafromstatestg'
+            backendAzureRmStorageAccountSku: 'Standard_LRS'
             backendAzureRmContainerName: 'tfstatecon'
             backendAzureRmKey: 'terraformstate.tfstate'
             allowTelemetryCollection: false

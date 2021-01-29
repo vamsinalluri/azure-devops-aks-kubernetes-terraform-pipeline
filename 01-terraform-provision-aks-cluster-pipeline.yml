@@ -104,3 +104,9 @@ stages:
                 environmentServiceName: 'terraform-aks-azurerm-svc-con'
                 commandOptions: '$(Pipeline.Workspace)/terraform-manifests-out/$(DEV_ENVIRONMENT)-$(Build.BuildId).out'
                 allowTelemetryCollection: false
+            - task: TerraformCLI@0
+              inputs:
+                command: 'destroy'
+                workingDirectory: '$(Pipeline.Workspace)/terraform-manifests-out'
+                environmentServiceName: 'terraform-aks-azurerm-svc-con'
+                allowTelemetryCollection: false
